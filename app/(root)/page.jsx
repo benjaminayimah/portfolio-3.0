@@ -67,7 +67,7 @@ function Home() {
 
   return (
     <>
-      <section ref={targetRef} className="h-[102vh] bg-[#9DA1A4] relative">
+      <section ref={targetRef} className="h-screen md:h-[102vh] bg-[#9DA1A4] relative">
         <div className="flex flex-col h-full relative overflow-hidden">
           <MotionImage
             style={{ translateY: translateY}}
@@ -85,7 +85,7 @@ function Home() {
             height={1080}
           />
           <Header />
-          <div className='flex justify-center absolute bottom-25 md:bottom-1/2 left-1/2 translate-y-1/2 -translate-x-1/2 z-10'>
+          <div className='flex justify-center absolute bottom-20 md:bottom-1/2 left-1/2 translate-y-1/2 -translate-x-1/2 z-10'>
             <div className='w-[92vw] sm:w-[90vw] max-w-448 flex justify-between items-center md:flex-row-reverse'>
               <div className='max-w-70 text-sm text-white'>
                 <p>A UX designer and Engineer  passionate about creating thoughtful, user-centered digital experiences that are both intuitive and accessible.</p>
