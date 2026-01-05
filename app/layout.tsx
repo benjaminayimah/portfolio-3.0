@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, IBM_Plex_Mono } from "next/font/google";
-import "./styles/globals.css";
+import WindowSizeListener from "@/listeners/WindowSizeListener"
+import "@/styles/globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${plusJakartaSans.variable} ${ibmPlexMono.variable} font-sans antialiased`}
       >
+        <WindowSizeListener />
         {children}
       </body>
     </html>

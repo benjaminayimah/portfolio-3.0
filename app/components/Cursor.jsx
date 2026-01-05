@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react'
 import { animate, motion, useMotionValue, useSpring } from 'framer-motion'
-import { useUIStore } from '@/app/store'
+import { useUIStore } from '@/store'
 
 
 
@@ -91,7 +91,7 @@ function Cursor({stickyElements}) {
   return (
       <motion.div
         ref={cursorRef}
-        className="fixed pointer-events-none rounded-3xl bg-black z-100 -left-3"
+        className="fixed pointer-events-none rounded-full bg-black z-100 -left-3"
         style={{
             left: smoothMouse.x,
             top: smoothMouse.y,
