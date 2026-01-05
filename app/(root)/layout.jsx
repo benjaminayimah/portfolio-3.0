@@ -41,7 +41,6 @@ function RootLayout({ children }) {
         { showHamburger && (
           <Hamburger ref={menuRef} mobileMenu={mobileMenu} toggleMenu={toggleMenu} />
         )}
-        {/* <Hamburger ref={menuRef} handleToggle={handleToggle} menuIsActive={isActive} /> */}
         <Menu mobileMenu={mobileMenu} toggleMenu={toggleMenu} />
           {children}
       </main>

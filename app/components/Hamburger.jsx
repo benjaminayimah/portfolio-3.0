@@ -8,7 +8,7 @@ import Magnetic from './Magnetic';
 const Hamburger = forwardRef(({mobileMenu, toggleMenu}, ref) => {
 
     return (
-        <div className={`flex fixed top-7 md:top-9 items-center md:gap-2 text-[1.1rem] ${styles.hamburgerWrapper}`}>
+        <div className={`flex fixed top-4 md:top-9 items-center md:gap-2 text-[1.1rem] ${styles.hamburgerWrapper}`}>
             <Magnetic>
                 <button
                     onClick={toggleMenu}
