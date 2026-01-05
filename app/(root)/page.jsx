@@ -68,7 +68,7 @@ function Home() {
   return (
     <>
       <section ref={targetRef} className="h-[102vh] bg-[#9DA1A4] relative">
-        <div className="flex flex-col h-full justify-between relative overflow-hidden">
+        <div className="flex flex-col h-full relative overflow-hidden">
           <MotionImage
             style={{ translateY: translateY}}
             src="https://res.cloudinary.com/dl4wyqxbe/image/upload/v1767615399/banner_jrfwqh.png"
@@ -78,25 +78,25 @@ function Home() {
             onLoadingComplete={() => setLoaded(true)}
             data-loaded={loaded}
             className={`
-              transition-all duration-500 h-full w-auto absolute left-1/2 -translate-x-1/2 object-cover pointer-events-none select-none z-0 will-change: transform
+              h-full w-auto absolute left-1/2 -translate-x-1/2 object-cover pointer-events-none select-none z-0 will-change-transform
               ${loaded ? 'scale-100 blur-0' : 'scale-105 blur-sm'}
             `}
             width={1920}
             height={1080}
           />
           <Header />
-          <div className='flex justify-center'>
-            <div className='w-[92vw] sm:w-[90vw] max-w-448 flex justify-between items-center absolute top-1/2 -translate-y-1/2 z-10'>
-              <div>
-                <SpinBadge />
-              </div>
+          <div className='flex justify-center absolute bottom-25 md:bottom-1/2 left-1/2 translate-y-1/2 -translate-x-1/2 z-10'>
+            <div className='w-[92vw] sm:w-[90vw] max-w-448 flex justify-between items-center md:flex-row-reverse'>
               <div className='max-w-70 text-sm text-white'>
                 <p>A UX designer and Engineer  passionate about creating thoughtful, user-centered digital experiences that are both intuitive and accessible.</p>
+              </div>
+              <div>
+                <SpinBadge />
               </div>
             </div>
           </div>
 
-          <div className="overflow-hidden">
+          <div className="overflow-hidden absolute bottom-1/3 md:bottom-0 w-full">
             <motion.div
               className="flex whitespace-nowrap will-change-transform"
               style={{ x: baseX }}
