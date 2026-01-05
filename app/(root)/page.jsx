@@ -96,7 +96,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="overflow-hidden absolute bottom-1/3 md:bottom-0 w-full">
+          <div className="overflow-hidden absolute bottom-1/3 md:bottom-8 w-full">
             <motion.div
               className="flex whitespace-nowrap will-change-transform"
               style={{ x: baseX }}
