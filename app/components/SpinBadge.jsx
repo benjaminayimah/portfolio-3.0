@@ -6,7 +6,7 @@ const text = `• GOOGLE CERTIFIED • UI/UX DESIGNER `
 
 export default function SpinBadge() {
   return (
-    <a href="#">
+    <a href="https://www.credly.com/badges/6dd916d0-b88f-4a16-b34d-14962999f1d5" target='_blank' title='Google UX Design'>
       <div className={`relative flex justify-center items-center ${styles.circleWrapper}`}>
         <div className={`flex justify-center items-center ${styles.isoWrapper}`}>
           <svg xmlns="http://www.w3.org/2000/svg" width="29.65" height="30.25" viewBox="0 0 29.645 30.249">
