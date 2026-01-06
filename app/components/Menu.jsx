@@ -12,12 +12,12 @@ const menus = [
     { name: 'Contact', url: '/contact' },
 ]
 const socials = [
-    { name: 'LinkedIn', url: 'https://www.linkedin.com' },
-    { name: 'Behance', url: 'https://www.behance.net' },
-    { name: 'Instagram', url: 'https://www.instagram.com' },
-    { name: 'Twitter', url: 'https://twitter.com' },
-    { name: 'Bluesky', url: 'https://bsky.app' },
-    { name: 'GitHub', url: 'https://github.com' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/benjaminayimah'},
+    { name: 'Behance', url: 'https://www.behance.net/benjaminayimah'},
+    { name: 'Instagram', url: 'https://www.instagram.com/ben.tekk'},
+    { name: 'Twitter', url: 'https://x.com/benayimah'},
+    { name: 'Bluesky', url: 'https://bsky.app/profile/bentekk.bsky.social'},
+    { name: 'GitHub', url: 'https://github.com/benjaminayimah'},
 ]
 const Menu = ({mobileMenu, toggleMenu}) => {
     const pathname = usePathname();
@@ -52,7 +52,7 @@ const Menu = ({mobileMenu, toggleMenu}) => {
                     </div>
                     <div>
                         <h5 className="text-neutral-500 text-[0.8rem] whitespace-nowrap mb-6">SOCIAL MEDIA</h5>
-                        <div className="flex gap-16 sm:gap-[8rem] transition-[gap] duration-[1000ms] ease" >
+                        <div className="flex gap-16 sm:gap-32 transition-[gap] duration-1000 ease" >
                             <ul className="flex flex-col gap-2" data-type="socials">
                                 {
                                     socials.slice(0, 3).map((social) => (

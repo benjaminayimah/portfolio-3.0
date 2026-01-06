@@ -12,7 +12,6 @@ import {
 import { wrap } from '@motionone/utils'
 import Image from 'next/image'
 import SpinBadge from '../SpinBadge'
-import Header from '../Header'
 
 function Banner() {
   const [loaded, setLoaded] = useState(false)
@@ -81,7 +80,6 @@ function Banner() {
           width={1920}
           height={1080}
         />
-        <Header />
         <div className='flex justify-center absolute bottom-20 md:bottom-1/2 left-1/2 translate-y-1/2 -translate-x-1/2 z-10'>
           <div className='w-[92vw] sm:w-[90vw] max-w-448 flex justify-between items-center md:flex-row-reverse'>
             <div className='max-w-70 text-sm text-white'>

@@ -88,6 +88,31 @@ aside {
   }
 }
 
+nav {
+  a {
+    position: relative;
+    display: inline-block;
+  }
+  a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    display: block;
+    width: 0%;
+    height: 1px;
+    background-color: white;
+    transition: .3s ease;
+    margin-top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  a:hover::after {
+    width: 100%;
+    left: 0;
+    transform: translateX(0%);
+  }
+}
+
 .swap-text {
   transition: 1.5s cubic-bezier(.19, 1, .22, 1);
   div {
@@ -162,4 +187,50 @@ aside.menu-open {
 
 
 
+/* button */
 
+
+.button-outline[data-type="white"] {
+  &::before {
+    background-color: white;
+  }
+}
+.button-outline[data-type="black"] {
+  &:hover {
+    color: white;
+  }
+  &::before {
+    background-color: black;
+  }
+}
+
+.button-outline {
+  transition: .4s all cubic-bezier(0.1, 0.11, 0.2, .8) 0s;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    bottom: -110%;
+    left: 0;
+    mix-blend-mode: difference;
+    transition: inherit;
+  }
+  &:hover {
+    border: 1px solid #898f9d4a;
+    scale: 1.1;
+    &::before {
+      bottom: 0;
+      border-radius: 3rem;
+    }
+  }
+}
+
+
+
+
+.large-text {
+  font-size: calc(clamp(3.4rem, 6.2vw, 7rem) * 1.2);
+}

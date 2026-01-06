@@ -7,6 +7,8 @@ import Cursor from '../components/Cursor';
 import Hamburger from "../components/Hamburger";
 import Menu from "../components/Menu";
 import { AnimatePresence } from 'framer-motion';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 function RootLayout({ children }) {
   const { device, mobileMenu, toggleMenu } = useUIStore();
@@ -37,7 +39,7 @@ function RootLayout({ children }) {
 
   return (
     <ReactLenis root options={{ smooth: true, lerp: 0.1 }}>
-      <main id="app">
+      <main id="app" className='relative'>
         <Cursor stickyElements={[logoRef]} />
         <AnimatePresence>
         { showHamburger && (
@@ -45,7 +47,9 @@ function RootLayout({ children }) {
         )}
         </AnimatePresence>
         <Menu mobileMenu={mobileMenu} toggleMenu={toggleMenu} />
-          {children}
+        <Header />
+        {children}
+        <Footer />
       </main>
     </ReactLenis>
   )

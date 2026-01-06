@@ -8,7 +8,7 @@ function Header() {
   const { device, toggleMenu } = useUIStore();
   
   return (
-    <header className='flex justify-center relative py-8 md:py-12'>
+    <header className='absolute top-0 w-full z-10 flex justify-center py-8 md:py-12'>
       <div className='w-[90vw] sm:w-[90vw] max-w-448 flex justify-between items-center'>
         <Magnetic>
           <a href="/">
@@ -17,7 +17,7 @@ function Header() {
             </svg>
           </a>
         </Magnetic>
-        <nav className="flex gap-2">
+        <nav className="flex gap-3">
           {
             device === 'mobile' ? (
               <Magnetic>
@@ -26,13 +26,13 @@ function Header() {
             ) : (
               <>
                 <Magnetic>
-                  <a href="#projects" className='text-white text-base hover:underline underline-offset-4'>Projects,</a>
+                  <a href="#projects" className='text-white text-base'>Projects</a>
                 </Magnetic>
                 <Magnetic>
-                  <a href="#about" className='text-white text-base hover:underline underline-offset-4'>About,</a>
+                  <a href="#about" className='text-white text-base'>About</a>
                 </Magnetic>
                 <Magnetic>
-                  <a href="#contact" className='text-white text-base hover:underline underline-offset-4'>Contact</a>
+                  <a href="#contact" className='text-white text-base'>Contact</a>
                 </Magnetic>
               </>
             )
