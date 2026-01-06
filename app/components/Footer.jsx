@@ -10,21 +10,20 @@ function Footer() {
 
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ['start end', 'end end']
+    offset: ['start end', 'end start']
   })
 
   const translateY = useTransform(scrollYProgress, [0, 1], ['-300px', '0px']);
 
-
   return (
     <footer ref={targetRef} className='w-full py-30 bg-black text-white flex items-center justify-center overflow-hidden'>
-      <motion.div style={ device === 'mobile' ? {} : { translateY } } className='container w-[80vw] sm:w-[88vw] flex flex-col gap-8'>
+      <motion.div style={ device === 'mobile' ? { translateY: 0 } : { translateY } } className='container w-[80vw] sm:w-[88vw] flex flex-col gap-8'>
         <div className='pb-12 flex flex-col items-center gap-8'>
           <h1 className='leading-none text-center font-light mb-12 large-text'>
             Got a project <br />to discuss?
           </h1>
           <Magnetic classes={'inline-block w-full sm:w-auto'}>
-            <button data-type="white" className='w-full text-nowrap overflow-hidden relative sm:w-auto rounded-full py-16 sm:py-12 px-20 border-[1px] border-white font-medium text-3xl md:text-4xl button-outline'>
+            <button data-type="white" className='w-full text-nowrap overflow-hidden relative sm:w-auto rounded-full py-16 sm:py-12 px-20 border border-white font-medium text-3xl md:text-4xl button-outline'>
               Let's talk
             </button>
           </Magnetic>
