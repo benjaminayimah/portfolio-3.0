@@ -12,7 +12,7 @@ const words = [
 
 function HomeAbout() {
   return (
-    <section className='shadow-[0_30px_103px_10px_#000] bg-white relative z-1'>
+    <section id="about" className='shadow-[0_30px_103px_10px_#000] bg-white relative z-1'>
       <div className='flex justify-center'>
         <div className='w-[92vw] sm:w-[77vw] max-w-448 py-25 md:py-50 flex flex-col gap-16 md:gap-24'>
           <motion.h3

@@ -13,6 +13,10 @@
   --font-mono: var(--font-ibm-plex-mono), monospace, ui-monospace,;
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 .code, pre {
   font-family: var(--font-mono);
 }
@@ -88,7 +92,7 @@ aside {
   }
 }
 
-nav {
+nav[dataType="header"] {
   a {
     position: relative;
     display: inline-block;

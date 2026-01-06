@@ -17,7 +17,7 @@ function Header() {
             </svg>
           </a>
         </Magnetic>
-        <nav className="flex gap-3">
+        <nav className="flex gap-3" datatype='header'>
           {
             device === 'mobile' ? (
               <Magnetic>
