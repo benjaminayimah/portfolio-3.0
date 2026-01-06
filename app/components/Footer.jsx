@@ -10,7 +10,7 @@ function Footer() {
 
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ['start end', 'end start']
+    offset: ['start end', 'end end']
   })
 
   const translateY = useTransform(scrollYProgress, [0, 1], ['-300px', '0px']);
