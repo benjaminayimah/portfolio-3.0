@@ -63,7 +63,7 @@ function Banner() {
 
   const translateY = useTransform(scrollYProgress, [0, 1], ['0px', '10vh'])
   return (
-    <section ref={targetRef} className="h-screen md:h-[102vh] bg-[#9DA1A4] relative">
+    <section ref={targetRef} className="h-screen md:h-[102vh] bg-[#9DA1A4] relative z-2">
       <div className="flex flex-col h-full relative overflow-hidden">
         <MotionImage
           style={{ translateY: translateY}}
