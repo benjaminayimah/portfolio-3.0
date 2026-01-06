@@ -15,6 +15,10 @@ function Footer() {
 
   const translateY = useTransform(scrollYProgress, [0, 1], ['-300px', '0px']);
 
+  const bookACall = () => {
+    window.open('https://calendar.app.google/AP14hzCt2vLaoZns8', '_blank');
+  }
+
   return (
     <footer ref={targetRef} className='w-full py-30 bg-black text-white flex items-center justify-center overflow-hidden'>
       <motion.div style={ { translateY } } className='container w-[80vw] sm:w-[88vw] flex flex-col gap-8'>
@@ -23,8 +27,8 @@ function Footer() {
             Got a project <br />to discuss?
           </h1>
           <Magnetic classes={'inline-block w-full sm:w-auto'}>
-            <button data-type="white" className='w-full text-nowrap overflow-hidden relative sm:w-auto rounded-full py-12 px-20 border border-white font-medium text-3xl md:text-4xl button-outline'>
-              Let's talk
+            <button onClick={bookACall} data-type="white" className='w-full text-nowrap overflow-hidden relative sm:w-auto rounded-full py-12 px-20 border border-white font-medium text-3xl md:text-4xl button-outline'>
+              Book a Call
             </button>
           </Magnetic>
         </div>
