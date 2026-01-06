@@ -27,7 +27,7 @@ function RootLayout({ children }) {
     }
 
     const handleScroll = () => {
-      setShowHamburger(window.scrollY >= 80)
+      setShowHamburger(window.scrollY >= 60)
     }
 
     handleScroll() // run once on mount
@@ -38,7 +38,15 @@ function RootLayout({ children }) {
 
 
   return (
-    <ReactLenis root options={{ smooth: true, lerp: 0.1 }}>
+    <ReactLenis
+      root
+      autoRaf={device !== 'mobile'}
+      options={{ 
+        smooth: true, 
+        smoothWheel: device !== 'mobile',
+        lerp: 0.1 
+      }}
+      >
       <main id="app" className='relative'>
         <Cursor stickyElements={[logoRef]} />
         <AnimatePresence>

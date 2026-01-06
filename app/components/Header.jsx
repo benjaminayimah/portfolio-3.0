@@ -3,7 +3,6 @@ import Magnet from './Magnetic';
 import { useUIStore } from '@/store';
 
 
-
 function Header() {
   const { device, toggleMenu } = useUIStore();
   

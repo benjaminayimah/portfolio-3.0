@@ -47,11 +47,13 @@
 
 /* Circular spinning text */
 .circleText {
+  --spin-speed: 12s;
   position: absolute;
   width: 100%;
   height: 100%;
-  animation: spin 12s linear infinite;
+  animation: spin var(--spin-speed) linear infinite;
 }
+
 
 .circleText span {
   position: absolute;
