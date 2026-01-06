@@ -20,7 +20,7 @@ function Footer() {
     <footer ref={targetRef} className='w-full py-30 bg-black text-white flex items-center justify-center overflow-hidden'>
       <motion.div style={ device === 'mobile' ? {} : { translateY } } className='container w-[80vw] sm:w-[88vw] flex flex-col gap-8'>
         <div className='pb-12 flex flex-col items-center gap-8'>
-          <h1 className='leading-none text-center font-light mb-16 large-text'>
+          <h1 className='leading-none text-center font-light mb-12 large-text'>
             Got a project <br />to discuss?
           </h1>
           <Magnetic classes={'inline-block w-full sm:w-auto'}>
@@ -33,11 +33,9 @@ function Footer() {
             <div className='flex flex-col sm:flex-row gap-5'>
               <a data-type="white" href="mailTo:benjaminayimah@gmail.com" className='border w-full text-center sm:text-left sm:w-auto border-white rounded-full px-5 py-2 relative overflow-hidden button-outline'>
                 <div>benjaminayimah@gmail.com</div>
-                {/* <p className="absolute">benjaminayimah@gmail.com</p> */}
               </a>
               <a data-type="white" href="tel:+233 54 124 7250" className='border w-full text-center sm:text-left sm:w-auto border-white rounded-full px-5 py-2 relative overflow-hidden button-outline'>
                 <div>+233 54 124 7250</div>
-                {/* <p className="absolute">+233 54 124 7250</p> */}
               </a>
             </div>
             <p className='text-sm md:text-base text-center text-neutral-500'>© {new Date().getFullYear()} Benjamin Ayimah. All rights reserved.</p>
