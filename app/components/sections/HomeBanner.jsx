@@ -63,7 +63,7 @@ function Banner() {
     offset: ['start start', 'end start']
   })
 
-  const translateY = useTransform(scrollYProgress, [0, 1], ['0px', '10vh'])
+  const translateY = useTransform(scrollYProgress, [0, 1], ['0px', '20vh'])
   return (
     <section ref={targetRef} className="h-screen md:h-[102vh] bg-[#9DA1A4] relative z-2">
       <div className="flex flex-col h-full relative overflow-hidden">
