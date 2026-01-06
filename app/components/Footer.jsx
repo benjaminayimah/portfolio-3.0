@@ -17,7 +17,7 @@ function Footer() {
 
   return (
     <footer ref={targetRef} className='w-full py-30 bg-black text-white flex items-center justify-center overflow-hidden'>
-      <motion.div style={ device === 'mobile' ? { translateY: 0 } : { translateY } } className='container w-[80vw] sm:w-[88vw] flex flex-col gap-8'>
+      <motion.div style={ { translateY } } className='container w-[80vw] sm:w-[88vw] flex flex-col gap-8'>
         <div className='pb-12 flex flex-col items-center gap-8'>
           <h1 className='leading-none text-center font-light mb-12 large-text'>
             Got a project <br />to discuss?
