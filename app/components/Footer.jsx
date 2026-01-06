@@ -24,7 +24,7 @@ function Footer() {
       <motion.div style={ { translateY } } className='container w-[80vw] sm:w-[88vw] flex flex-col gap-8'>
         <div className='pb-12 flex flex-col items-center gap-8'>
           <h1 className='leading-none text-center font-light mb-12 large-text'>
-            Got a project <br />to discuss?
+            Got a project<br />to discuss?
           </h1>
           <Magnetic classes={'inline-block w-full sm:w-auto'}>
             <button onClick={bookACall} data-type="white" className='w-full text-nowrap overflow-hidden relative sm:w-auto rounded-full py-12 px-20 border border-white font-medium text-3xl md:text-4xl button-outline'>
