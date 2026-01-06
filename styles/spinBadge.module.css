@@ -1,5 +1,18 @@
+
+.link {
+  display: inline-block;
+}
+
+.circleWrapper {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
 .isoWrapper {
-    --dimension: 76px;
+  --dimension: 76px;
     height: var(--dimension);
     width: var(--dimension);
     background-color: #ffffff;
@@ -7,41 +20,54 @@
     z-index: 2;
 }
 
-.circleWrapper {
-    --dimension: 120px;
-    width: var(--dimension);
-    height: var(--dimension);
+/* Google logo */
+.googleLogo {
+  transform: scale(1);
+  transition: transform 0.35s ease, opacity 0.35s ease;
 }
-  
+
+/* Arrow */
+.arrow {
+  position: absolute;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+/* Hover effects */
+.circleWrapper:hover .googleLogo {
+  transform: scale(0.75);
+  opacity: 0;
+}
+
+.circleWrapper:hover .arrow {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Circular spinning text */
 .circleText {
   position: absolute;
   width: 100%;
   height: 100%;
-  font-size: 0.7rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: #ffffff;
-  animation: spin 10s linear infinite;
-  border-radius: 50%;
+  animation: spin 12s linear infinite;
 }
 
 .circleText span {
   position: absolute;
   left: 50%;
   top: 0;
-  transform-origin: 0 60px;
-
-  /* 🔑 SPACING CONTROL */
+  transform-origin: 0 70px;
   transform: rotate(calc(var(--i) * 10deg));
+  font-size: 10px;
+  letter-spacing: 0.08em;
 }
 
-  
 @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-  
