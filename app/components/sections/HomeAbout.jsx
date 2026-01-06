@@ -45,10 +45,8 @@ function HomeAbout() {
               </figure>
             </motion.div>
           </div>
-          
         </div>
       </div>
-      
       </section>
   )
 }
