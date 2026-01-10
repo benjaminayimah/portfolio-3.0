@@ -17,6 +17,16 @@ html {
   scroll-behavior: smooth !important;
 }
 
+::selection {
+  color: #fff;
+  background: #505052;
+}
+::-moz-selection {
+  color: #fff;
+  background: #505052;
+}
+
+
 .code, pre {
   font-family: var(--font-mono);
 }

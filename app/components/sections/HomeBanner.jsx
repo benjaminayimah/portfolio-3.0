@@ -73,7 +73,7 @@ function Banner() {
           blurDataURL={banner_min_base64}
           alt='Banner image'
           placeholder="blur"
-          onLoadingComplete={() => setLoaded(true)}
+          onLoad={() => setLoaded(true)}
           data-loaded={loaded}
           className={`
             h-full w-auto absolute left-1/2 -translate-x-1/2 object-cover pointer-events-none select-none z-0 will-change-transform
@@ -104,6 +104,9 @@ function Banner() {
             </div>
 
             {/* Duplicate for seamless loop */}
+            <ScrollerText />
+            <ScrollerText />
+            <ScrollerText />
             <ScrollerText />
           </motion.div>
         </div>
